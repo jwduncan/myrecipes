@@ -19,4 +19,10 @@ Rails.application.routes.draw do
   post '/login',  to: 'logins#create'
   get  '/logout', to: 'logins#destroy'
 
+  #styles
+  resources :styles, only: [:new, :create, :show]
+  
+  #ingredients
+  resources :ingredients, only: [:new, :create, :show]
+  
 end
