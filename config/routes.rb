@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     member do 
       post 'like'
     end
+   resources :reviews, only: [:create, :destroy]
   end
   
   # Chefs
@@ -24,5 +25,6 @@ Rails.application.routes.draw do
   
   #ingredients
   resources :ingredients, only: [:new, :create, :show]
+  
   
 end
